@@ -1,0 +1,44 @@
+System Configuration: 
+====================
+
+ 1. RAM       = 8 GB
+ 2. Processor = Intel i5
+
+
+            .-/+oossssoo+/-.               demesaikiran@Semaphore 
+        `:+ssssssssssssssssss+:`           ---------------------- 
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 21.04 x86_64 
+    .ossssssssssssssssssdMMMNysssso.       Host: 2347F22 ThinkPad T430 
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Kernel: 5.11.0-34-generic 
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Uptime: 5 days, 2 hours, 19 mins 
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Packages: 2320 (dpkg), 17 (snap) 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Shell: bash 5.1.4 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   Resolution: 1366x768, 1366x768 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   DE: GNOME 3.38.4 
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   WM: Mutter 
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   WM Theme: Adwaita 
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Theme: Yaru-dark [GTK2/3] 
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/    Icons: Yaru [GTK2/3] 
+  +sssssssssdmydMMMMMMMMddddyssssssss+     Terminal: gnome-terminal 
+   /ssssssssssshdmNNNNmyNMMMMhssssss/      CPU: Intel i5-3320M (4) @ 3.300GHz 
+    .ossssssssssssssssssdMMMNysssso.       GPU: Intel 3rd Gen Core processor Gr 
+      -+sssssssssssssssssyyyssss+-         Memory: 4309MiB / 7674MiB 
+        `:+ssssssssssssssssss+:`
+            .-/+oossssoo+/-.                                       
+                                                                   
+================================================================================
+
+Assignment:
+
+Function_Type_Time     Largest Value of N
+------------------    -------------------
+1. O(log n)        =   1000000000000000000.000000
+2. O(n)            =   328000000.000000
+3. O(n^2)          =   18115.000000
+4. O(n^3)	   =   700.000000
+5. O(2^n)	   =   28.280000
+6. O(n^4)	   =   133.000000
+
+
+==============================================================================
+
