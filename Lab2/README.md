@@ -1,4 +1,6 @@
-## Observations/ Self Analysis
+# Observations/ Self Analysis
+
+## Lab2: Appreciating Best, Average and Worst Case Complexities
 
 This is my self analysis on the experiment done for the various inputs as follows
 
@@ -17,11 +19,11 @@ On the algorithms,
 >3. Selection sort
 
 
-### Smaller Inputs analysis
+## Smaller Inputs analysis
 
 For smaller inputs the bubble sort, selection sort and Insertion sort play similarly interms of time of execution, in that case considering the `cost of operations` we can choose bubble sort for smaller inputs of size less than `10000`.
 
-### Larger Inputs analysis
+## Larger Inputs analysis
 
 Whereas for larger inputs `bubble sort` will outdate it's time of execution to very large and `selection sort` plays `better` role compared to bubble sort. Whereas `Insertion sort` will give you the output in very less time comparing with selection sort and bubble sort.
 
