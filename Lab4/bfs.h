@@ -29,7 +29,7 @@ ADJMat * readAdjList(char * filename)
     }
 
     list -> array[i][0] = list -> array[i][1] = -1;
-    // We got Adjacency list copy here.
+    // We got Adjacency list copy here. 
     fclose(fp);
     return list;
 }
