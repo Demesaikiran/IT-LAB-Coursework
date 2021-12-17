@@ -85,9 +85,9 @@ Graph * createGraph(int V)
     Graph * newGraph = malloc(sizeof(Graph));
     newGraph -> V = V;
 
-    newGraph -> nodes = malloc(V * sizeof(ADJList));
+    newGraph -> nodes = malloc((V+1) * sizeof(ADJList));
 
-    for(int i = 0; i < V; ++i)
+    for(int i = 1; i <= V; ++i)
     {
         newGraph -> nodes[i].head = NULL;
     }
@@ -192,10 +192,10 @@ void minHeapify(MinHeap * minheap, int index)
     int right = 2 * index + 2;
     int small = index;
 
-    if(left < minheap -> size && minheap -> nodes[left] -> value < minheap -> nodes[small] -> value)
+    if((left < minheap -> size) && ((minheap -> nodes[left] -> value) < minheap -> nodes[small] -> value))
         small = left;
     
-    if(right < minheap -> size && minheap -> nodes[right] -> value < minheap -> nodes[small] -> value)
+    if((right < minheap -> size) && ((minheap -> nodes[right] -> value) < minheap -> nodes[small] -> value))
         small = right;
 
     if(small != index)
@@ -273,12 +273,12 @@ void printArr(int arr[], int n)
 void PrimMST(Graph * graph)
 {
     int V = graph -> V;
-    int parent[V];
-    int value[V];
+    int parent[V+1];
+    int value[V+1];
 
-    MinHeap * minheap = createMinHeap(V);
+    MinHeap * minheap = createMinHeap(V+1);
 
-    for(int i = 1; i < V; i++)
+    for(int i = 1; i <= V; i++)
     {
         parent[i] = -1;
         value[i]  = INT_MAX; // Infinity
@@ -288,7 +288,7 @@ void PrimMST(Graph * graph)
 
     // Starting with the 0th vertex
 
-    value[0] = 0;
+    value[1] = 0;
     minheap -> nodes[0] = createMinHeapNode(0, value[0]);
     minheap -> position[0] = 0;
     minheap -> size = V;
@@ -320,13 +320,23 @@ void PrimMST(Graph * graph)
 void printGraph(Graph * g)
 {
     int v = g -> V;
-    ADJList * temp = g -> nodes;
+    
 
-    for(int i = 0; i < v; i++)
+    for(int i = 1; i <= v; i++)
     {
+        ADJList temp = g -> nodes[i];
+        ALNode * newnode = temp.head;
+        printf("Vertex - %d: \n\n", i);
+        while(newnode != NULL)
+        {
+            printf("%d | %d --> ", newnode->dest, newnode->weight);
+            newnode = newnode->next;
+        }
+        printf("NULL\n");
+        /* 
         ALNode * node = temp -> head;
         printf("%d -- %d\n", node -> dest, node -> weight);
-        temp = g -> nodes;
+        temp = g -> nodes; */
     }
 
 }
