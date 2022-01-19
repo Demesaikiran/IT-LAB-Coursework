@@ -2,7 +2,12 @@
 #include<stdlib.h>
 #include<limits.h>
 
-
+/**
+ * @brief Create a Array object
+ * 
+ * @param size 
+ * @return int* 
+ */
 int * createArray(int size)
 {
     int * array = malloc(sizeof(int) * size);
@@ -10,6 +15,15 @@ int * createArray(int size)
     return array;
 }
 
+/**
+ * @brief Prints the order in which the matrix chain is evaluated
+ * 
+ * @param i 
+ * @param j 
+ * @param n 
+ * @param count 
+ * @param mat <Resultant Matrix>
+ */
 void printOrder(int i, int j, int n, int count, int * mat)
 {
     int k = *((mat + j * n) + i);
@@ -26,7 +40,13 @@ void printOrder(int i, int j, int n, int count, int * mat)
     }
 }
 
-
+/**
+ * @brief Matrix chain Dynamic programming component
+ * 
+ * @param dim <Dimensions>
+ * @param nOfMat <Total number of matrices>
+ * @return int <Returns the total number of calculations>
+ */
 int matrixChainDP(int * dim, int nOfMat)
 {
     int multi[nOfMat+1][nOfMat+1];
@@ -58,7 +78,7 @@ int matrixChainDP(int * dim, int nOfMat)
         }
     }
 
-    printf("%d", multi[1][nOfMat]);
+    printf("%d ", multi[1][nOfMat]);
 
     printOrder(1, nOfMat,nOfMat+1, 0, (int *) multi);
     return multi[1][nOfMat];
@@ -75,5 +95,5 @@ int main()
         scanf("%d", &arr[i]);
 
     int nOfCalculations = matrixChainDP(arr, n);
-    printf("%d", nOfCalculations);
+    // printf("%d", nOfCalculations);
 }
